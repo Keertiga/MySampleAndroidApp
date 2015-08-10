@@ -56,7 +56,7 @@ public class MainActivity extends ActionBarActivity {
         String username=userDataOperations.read(emailVal,passwordVal);
         Log.d("MainActivity","CheckAuth-username"+username);
         if(username!=null) {
-            Intent intent=new Intent(this,DisplayMessageActivity.class);
+            Intent intent=new Intent(this,TestActivity.class);
             intent.putExtra("EXTRA_MESSAGE","hello");
             startActivity(intent);
         }

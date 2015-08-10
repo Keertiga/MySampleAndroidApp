@@ -13,4 +13,18 @@
     <string name="title_activity_display_message">My Message</string>
     <string name="title_activity_register">RegisterActivity</string>
     <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_navigation">NavigationActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string-array name="itemList">
+        <item>Home</item>
+        <item>Main Screen</item>
+        <item>End Screen</item>
+    </string-array>
+    <array name="IconList">
+        <item>@drawable/minion</item>
+        <item>@drawable/minion1</item>
+        <item>@drawable/minion2</item>
+    </array>
 </resources>
