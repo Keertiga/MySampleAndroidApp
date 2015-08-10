@@ -19,7 +19,7 @@ public class TestActivity extends ActionBarActivity {
         Intent intent=getIntent();
         String name=intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
         Log.d("TestActivity","OnCreate"+name);
-        String display="WELCOME"+name;
+        String display="WELCOME TEST"+name;
         TextView textView=new TextView(this);
         textView.setTextSize(20);
         textView.setTextColor(Color.GREEN);
