@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal|center_vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <LinearLayout android:id="@+id/email_login_form" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/prompt_username"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                />
+            <EditText android:id="@+id/username" android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" android:maxLines="1"
+                android:singleLine="true"
+                android:layout_marginBottom="10dp"
+                android:textColorHint="#000000"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/prompt_email"
+                android:textSize="20dp"
+                android:textColor="#000000"/>
+
+            <EditText android:id="@+id/email" android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" android:maxLines="1"
+                android:singleLine="true"
+                android:layout_marginBottom="10dp"
+                android:textColorHint="#000000"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/prompt_password"
+                android:textSize="20dp"
+                android:textColor="#000000"/>
+
+            <EditText android:id="@+id/password" android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeActionLabel="@string/action_sign_in"
+                android:imeOptions="actionUnspecified" android:inputType="textPassword"
+                android:maxLines="1" android:singleLine="true"
+                android:layout_marginBottom="10dp"
+                android:textColorHint="#000000"
+                android:textColor="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/confirm_password"
+                android:textSize="20dp"
+                android:textColor="#000000"/>
+
+            <EditText android:id="@+id/confirmpassword" android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeActionLabel="@string/action_sign_in"
+                android:imeOptions="actionUnspecified" android:inputType="textPassword"
+                android:maxLines="1" android:singleLine="true"
+                android:layout_marginBottom="10dp"
+                android:textColorHint="#000000"
+                android:textColor="#000000" />
+
+
+            <Button android:id="@+id/email_sign_up_button" style="?android:textAppearanceSmall"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" android:text="@string/action_sign_up"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:background="#000000"
+                android:onClick="register"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
