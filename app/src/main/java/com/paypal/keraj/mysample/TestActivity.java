@@ -5,7 +5,7 @@ import android.app.FragmentManager;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.Color;
-import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
@@ -30,17 +30,39 @@ public class TestActivity extends ActionBarActivity {
     private String[] itemList;
     private ListView drawerList;
     private DrawerLayout drawerLayout;
-    private ActionBarDrawerToggle mDrawerToggle;
+  //  private ActionBarDrawerToggle drawerToggle;
+    private ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        actionBar=getSupportActionBar();
+        actionBar.setDefaultDisplayHomeAsUpEnabled(true);
+        actionBar.setLogo(R.drawable.minion);
         setContentView(R.layout.activity_test);
         itemList = getResources().getStringArray(R.array.itemList);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawerList=(ListView)findViewById(R.id.left_drawer);
         drawerList.setAdapter(new ArrayAdapter<String>(this, R.layout.drawer_list_item, itemList));
         drawerList.setOnItemClickListener(new SlideMenuClickListener());
+     //   actionBar=getSupportActionBar();
+       // actionBar.show();
+        //actionBar.setLogo(R.drawable.ic_drawer);
+       //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setHomeButtonEnabled(true);
+
+
+       /* drawerToggle = new ActionBarDrawerToggle(this, drawerLayout,R.drawable.ic_drawer,R.string.drawer_open, R.string.drawer_close ){
+            @Override
+            public void onDrawerClosed(View drawerView) {
+                invalidateOptionsMenu(); // calls onPrepareOptionsMenu()
+            }
+
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                invalidateOptionsMenu(); // calls onPrepareOptionsMenu()
+            }
+        };*/
     }
 
     private class SlideMenuClickListener implements
@@ -81,8 +103,7 @@ public class TestActivity extends ActionBarActivity {
             setTitle(itemList[position]);
             drawerLayout.closeDrawer(drawerList);
         } else {
-            // error in creating fragment
-            Log.e("MainActivity", "Error in creating fragment");
+           Log.e("MainActivity", "Error in creating fragment");
         }
     }
 
@@ -94,7 +115,7 @@ public class TestActivity extends ActionBarActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_test, menu);
-        return true;
+        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
@@ -102,13 +123,16 @@ public class TestActivity extends ActionBarActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()) {
+            case R.id.action_search:
+                //openSearch();
+                return true;
+            case R.id.action_settings:
+               // openSettings();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-
-        return super.onOptionsItemSelected(item);
     }
 }
