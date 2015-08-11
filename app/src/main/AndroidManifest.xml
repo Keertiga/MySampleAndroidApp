@@ -19,7 +19,8 @@
         <activity
             android:name=".DisplayMessageActivity"
             android:label="@string/title_activity_display_message"
-            android:parentActivityName=".MainActivity" >
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.paypal.keraj.mysample.MainActivity" />
@@ -37,6 +38,14 @@
             android:label="@string/title_activity_test"
             android:logo="@drawable/minion"
             android:theme="@style/Theme.AppCompat.Light">
+        </activity>
+        <activity
+            android:name=".actionbar_Activity"
+            android:label="@string/title_activity_actionbar_"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.paypal.keraj.mysample.MainActivity" />
         </activity>
     </application>
 

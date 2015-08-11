@@ -2,7 +2,7 @@
     <string name="app_name">MySample</string>
     <string name="edit_message">Enter a message</string>
     <string name="hello_world">Hello Girls!!!</string>
-    <string name="action_settings">Settings</string>
+
     <string name="button_send">Send</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -17,8 +17,16 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
+<<<<<<< HEAD
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
+=======
+    <string name="action_settings">Settings</string>
+    <string name="search">Search</string>
+     <string name="contact_us">Contact Us</string>
+    <string name="about">About</string>
+
+>>>>>>> 9ffe3257fdf078124fd4e661ddc24bfbbf458580
     <string-array name="itemList">
         <item>Home</item>
         <item>Main Screen</item>
@@ -29,4 +37,5 @@
         <item>@drawable/minion1</item>
         <item>@drawable/minion2</item>
     </array>
+    <string name="title_activity_actionbar_">actionbar_Activity</string>
 </resources>
